@@ -21,7 +21,6 @@ export default{
   components:{
     HeaderPage,
     Post,
-    
     FooterPage
   },
   mounted(){

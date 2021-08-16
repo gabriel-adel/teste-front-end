@@ -3,7 +3,7 @@
       <div class="img">
         <img :src='require("../assets/footer-logo.webp")'/>
       </div>
-      <p>(c)2021 Globaly. All rights reserved. | Privacy Policy</p>
+      <p class='copy'>(c)2021 Globaly. All rights reserved. | Privacy Policy</p>
 
   </div>
 </template>
@@ -25,5 +25,10 @@ export default {
     height: 150px;
     background-color: #31353d;
     color:white
+  }
+  .copy{
+    padding:0 10px;
+    text-align: center;
+    margin-top:10px;
   }
 </style>

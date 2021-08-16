@@ -1,6 +1,6 @@
 <template>
     <div class='side-side'>
-        <img class='image' :src="require('../../assets/image39.jpg')">
+        <img class='image' :src="require('../../assets/image39.webp')">
         <div class='container'>
             <div class="backgroundImage" :style="{ backgroundImage: 'url(' + require('../../assets/image40.webp') + ')' }">
                 <div class='content' >

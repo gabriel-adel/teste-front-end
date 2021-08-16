@@ -1,5 +1,5 @@
 <template>
-    <div :style="{ backgroundImage: 'url(' + require('../../assets/image44.jpg') + ')' }" class='backgroundImage'>
+    <div :style="{ backgroundImage: 'url(' + require('../../assets/image44.webp') + ')' }" class='backgroundImage'>
         <p>As we’re managing the aspects of your business,</p>
         <p>Your revenue continues to grow.</p>
 
@@ -32,7 +32,8 @@ export default{
             font-size: 60px;
             font-weight: bold;
         }
-        height: 300px;
+        
+        padding: 50px 0;
         display:flex;
         flex-direction: column;
         justify-content: center;

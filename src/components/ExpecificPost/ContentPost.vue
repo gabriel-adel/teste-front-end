@@ -1,7 +1,7 @@
 <template>
     <div class="arrount-content">
         <div class=''>
-            <img class='image' :src="require('../../assets/foto4Post.jpg')">
+            <img class='image' :src="require('../../assets/foto4Post.webp')">
         </div>
         <div class='content-info'>
             <div class="title">

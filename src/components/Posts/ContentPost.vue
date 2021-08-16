@@ -96,7 +96,7 @@
         border-radius:10px;
         width: 190px;
         margin: 0 0 25px 0;
-    }
+        }
     }
     @media only screen and (max-width: 745px) {
         .title{

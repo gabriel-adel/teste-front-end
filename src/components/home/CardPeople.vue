@@ -26,7 +26,9 @@ export default {
     .content{
         display: flex;
         padding: 10px;
-        flex:40%
+        flex:40%;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .desc{
         p{
@@ -43,10 +45,16 @@ export default {
         }
     }
     .show-people{
-        width: 60%;
+        flex:55%;
         margin:0 auto;
         div{
             margin:30px 0;
         }
     }
+    @media only screen and (max-width: 1210px) {
+        .show-people{
+            text-align: center;
+        }
+    }
+    
 </style>

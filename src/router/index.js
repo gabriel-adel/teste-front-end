@@ -8,23 +8,40 @@ const routes = [
     component: Home
   },
   {
-    path: '/posts',
+    path: '/posts/',
     name: 'Post',
     component: () => import('../views/Posts.vue')
   },
   {
-    path: '/posts/:type/:id/:name',
+    path: '/posts/:type/:id/:name/',
     name: 'PostSomething',
     component: () => import('../views/Posts.vue')
   },
-  
-  
   {
-    path: '/post/:id/:nome',
+    path: '/gallery/',
+    name: 'Gallery',
+    component: () => import('../views/Gallery.vue')
+  },
+  {
+    path: '/events/',
+    name: 'Events',
+    component: () => import('../views/Events.vue')
+  },
+  {
+    path: '/event/:id/:name/',
+    name: 'ExpecificEvents',
+    component: () => import('../views/ExpecificEvents.vue')
+  },
+  {
+    path: '/team/',
+    name: 'Team',
+    component: () => import('../views/Team.vue')
+  },
+  {
+    path: '/post/:id/:nome/',
     name: 'ExpecificPost',
     component: () => import('../views/ExpecificPost.vue')
   },
-  
 ]
 
 const router = createRouter({
