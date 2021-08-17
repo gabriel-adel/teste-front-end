@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const api = (url,method,body)=>{
+const api = (path,method,body)=>{
     
     var config = {
         method: method,
-        url: `https://6dx4acv5kc.execute-api.us-east-1.amazonaws.com/dev/${url}`,
+        url: `https://2ib0rv99m0.execute-api.us-east-1.amazonaws.com/dev/${path}`,
         headers: { 
             
             'Content-Type': 'application/json',

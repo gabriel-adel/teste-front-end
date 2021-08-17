@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import api from '../../api.js'
     import Event from './event.vue'
     export default{
         components:{
@@ -20,10 +20,12 @@
             }
         },
         mounted(){
-            axios.get(`https://531hg34i78.execute-api.us-east-1.amazonaws.com/dev/events`)
+            api("event/events","get",'')
             .then((res)=>{
                 this.events = res.data;
+                
             })
+            
         },
     };
 </script>

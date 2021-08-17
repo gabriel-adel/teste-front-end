@@ -6,7 +6,7 @@
 
 <script>
     import People from './People.vue'
-    import axios from 'axios';
+    import api from '../../api.js'
     export default{
         components:{
             People,
@@ -17,10 +17,10 @@
             }
         },
         mounted(){
-            axios.get(`https://ejmbd38fk6.execute-api.us-east-1.amazonaws.com/dev/peoples`)
+            api("team/peoples","get",'')
             .then((res)=>{
-                console.log(res.data);
                 this.team = res.data;
+                
             })
         },
     }

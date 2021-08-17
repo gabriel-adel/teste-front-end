@@ -30,20 +30,15 @@
             }
         },
         mounted(){
-            
-            setTimeout(()=>{
-                api(`get-one-posts/${this.id}`,"get",'')
-                .then((res)=>{
-                    
-                    this.title=res.data[0].title;
-                    this.image=res.data[0].thumbnail;
-                    this.date=res.data[0].dataUpdate;
-                    this.who=res.data[0].who;
-                    this.content=res.data[0].post;
-                    
-                })
-                
-            },200)
+            api(`blog/get-one-posts/${this.id}`,"get",'')
+            .then((res)=>{
+                this.title=res.data[0].title;
+                this.image=res.data[0].thumbnail;
+                this.date=res.data[0].dataUpdate;
+                this.who=res.data[0].who;
+                this.content=res.data[0].post;
+            })
+        
         },
     };
 </script>

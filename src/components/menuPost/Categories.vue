@@ -18,8 +18,9 @@
             Title
         },
         created(){
-            api("get-category","get",'')
+            api("blog/get-category","get",'')
             .then((res)=>{
+                
                 this.categories = res.data.slice(0,10);
             })
         }

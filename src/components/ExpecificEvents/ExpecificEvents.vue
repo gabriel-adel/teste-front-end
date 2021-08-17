@@ -8,7 +8,7 @@
 
 <script>
     import Content from './content.vue'
-    import axios from 'axios'
+    import api from '../../api.js';
     export default{
         props:['id'],
         components:{
@@ -27,9 +27,8 @@
             }
         },
         mounted(){
-            axios.get(`https://531hg34i78.execute-api.us-east-1.amazonaws.com/dev/events/${this.id}`)
+            api(`/event/events/${this.id}`,"get",'')
             .then((res)=>{
-                console.log(res.data)
                 this.contato= res.data[0].contato;
                 this.dateEvent= res.data[0].dateEvent;
                 this.drescri= res.data[0].drescri;
@@ -38,7 +37,6 @@
                 this.name= res.data[0].name;
                 this.thumbnail= res.data[0].thumbnail;
             })
-            
         },
         
     }

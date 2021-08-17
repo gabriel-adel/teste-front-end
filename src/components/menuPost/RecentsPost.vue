@@ -21,7 +21,7 @@
             }
         },
         created(){
-            api("get-posts","get",'')
+            api("blog/get-posts","get",'')
             .then((res)=>{
                 this.posts = res.data.slice(0,2);
                 this.x = this.posts[0]

@@ -40,9 +40,7 @@
     .desc-string{
         color: #565656;
     }
-    .blackbold{
-
-    }
+    
     .title{
         font-size: 18px;
         margin-top: 20px;

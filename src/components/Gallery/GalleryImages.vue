@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    import api from '../../api.js';
     export default{
         data:()=>{
             return{
@@ -30,9 +30,9 @@
             }
         },
         mounted(){
-            axios.get(`https://lxe83jprhe.execute-api.us-east-1.amazonaws.com/dev/gellery`)
+            api(`gallery/images`,"get",'')
             .then((res)=>{
-                this.images = res.data;
+                this.images = res.data
             })
         },
         methods: {

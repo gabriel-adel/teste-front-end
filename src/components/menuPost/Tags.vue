@@ -20,7 +20,7 @@
             Title
         },
         created(){
-            api("get-tags","get",'')
+            api("blog/get-tags","get",'')
             .then((res)=>{
                 this.tags = res.data.slice(0,10);
             })

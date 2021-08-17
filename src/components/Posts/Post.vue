@@ -3,6 +3,7 @@
         <div class='posts'>
             <ContentPost v-for="post in filterBlogs" :key="post.id" :id="post.id"  :title="post.title" :image="post.thumbnail" :date="post.dataUpdate" :who="post.who"/>
         </div>
+        
         <div class="arrount-menu">
             <div class="menu">
                 <Title title='Share'/>
@@ -25,7 +26,6 @@
     import Title from '../menuPost/Title.vue'
     import Categories from '../menuPost/Categories.vue'
     import Tags from '../menuPost/Tags.vue'
-    
     import RecentsPost from '../menuPost/RecentsPost.vue'
     import ContentPost from './ContentPost.vue'
     import api from '../../api.js';
@@ -46,7 +46,7 @@
             
         },
         created(){
-            api("get-posts","get",'')
+            api("blog/get-posts","get",'')
             .then((res)=>{
                 this.posts = res.data.slice(0,10);
             })
@@ -61,15 +61,17 @@
         methods:{
             selectTag(){
                 this.posts=[];
-                api(`/get-post-by-tag/${this.$route.params.id}`,"get",'')
+                api(`blog/get-post-by-tag/${this.$route.params.id}`,"get",'')
                 .then((res)=>{
+                    
                     this.posts = res.data.slice(0,10);
                 })
             },
             selectCategory(){
                 this.posts=[];
-                api(`/get-post-by-category/${this.$route.params.id}`,"get",'')
+                api(`blog/get-post-by-category/${this.$route.params.id}`,"get",'')
                 .then((res)=>{
+                    console.log(res.data)
                     this.posts = res.data.slice(0,10);
                 })
             }
